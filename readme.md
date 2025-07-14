@@ -80,7 +80,7 @@ fastapi.logs      # Log file (runtime generated)
    ```
    Or use uv: (recommended for development)
    ```sh
-   uv run fastapi.dev
+   uv run fastapi dev
    ```
 
 ## API Endpoints
