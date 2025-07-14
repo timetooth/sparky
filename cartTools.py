@@ -38,14 +38,11 @@ def add_item_to_cart(context: RunContextWrapper[User],quantity: int, product_id:
     if response.status_code == 200:
         response_data = response.json()
         success = response_data.get('success', False)
-        reason = response_data.get('reason', 'No reason provided')
+        reason = response_data.get('message', 'No reason provided')
         if success:
             return f"Item with Product ID {product_id} added to cart successfully."
         else:
             return "Item could not be added, Reason: " + reason
-
-    elif response.status_code == 404:
-        return "Failed to add item to cart."
     
     return "Trouble adding products to cart"
 
@@ -77,12 +74,23 @@ def get_all_items_in_cart(context: RunContextWrapper[User]) -> str:
         if success:
             products = response_data.get('data', {}).get('products', [])
             for product in products:
-                if product: cart_items.append(product.get('embedding_text', 'No details available for this product.'))
+                if product: 
+                    qty = product.get('quantity', "quantity not found")
+                    size = product.get('size', "size info not available")
+                    color = product.get('color', "color info not available")
+                    details = product.get('embedding_text', 'No details available for this product.')
+                    product_details = f"""Product details specific to cart:
+                    quantity of product in cart: {qty},
+                    size of product in cart: {size},
+                    color of product in cart: {color},
+                    generic details of product: {details},
+                    """
+                    cart_items.append(product_details)
             ret = "All items in the cart:\n"
             ret += '\n'.join(cart_items) if cart_items else "No items in the cart."
             return ret
         else:
-            return "Failed to fetch cart items, Reason: " + response_data.get('reason', 'No reason provided')
+            return "Failed to fetch cart items, Reason: " + response_data.get('message', 'No reason provided')
     
     elif response.status_code == 404:
         return "Cart not found."
@@ -116,7 +124,7 @@ def remove_all_items(context: RunContextWrapper[User]) -> str:
         if success:
             return "All items removed from the cart successfully."
         else:
-            return "Failed to remove items from cart, Reason: " + response_data.get('reason', 'No reason provided')
+            return "Failed to remove items from cart, Reason: " + response_data.get('message', 'No reason provided')
     
     elif response.status_code == 404:
         return "Cart not found."
@@ -139,7 +147,7 @@ def remove_item_from_cart(context: RunContextWrapper[User], product_id: int, col
     jwt_token = context.context.user_jwt
     if not jwt_token:
         return "No user JWT token was provided."
-    url = node_base_url + f"/app/cart/remove/{product_id}"
+    url = node_base_url + f"/app/cart"
     headers = {
         "Content-Type": "application/json",
         "Authorization": f"Bearer {jwt_token}"
@@ -157,7 +165,7 @@ def remove_item_from_cart(context: RunContextWrapper[User], product_id: int, col
         if success:
             return f"Item with Product ID {product_id} removed from cart successfully."
         else:
-            return "Failed to remove item from cart, Reason: " + response_data.get('reason', 'No reason provided')
+            return "Failed to remove item from cart, Reason: " + response_data.get('message', 'No reason provided')
     
     elif response.status_code == 404:
         return "Item not found in cart."

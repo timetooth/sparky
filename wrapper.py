@@ -27,7 +27,7 @@ async def get_agent_response(user_name, user_age, user_input, last_response_id=N
                             instructions=inst,
                             model="gpt-4.1",
                             tools=[search_by_category,search_by_id,fuzzy_search,vector_store_retriever_agent],
-                            handoffs=cart_manager
+                            handoffs=[cart_manager]
                             )
     
     try:

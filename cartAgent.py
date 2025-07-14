@@ -13,6 +13,7 @@ def get_user_agent():
         You help people with managing their cart. You can add items to the cart, remove items from the cart, and view the cart contents and clear all items in the cart.
         If there is any confusion about the product, you can search for the product using the search by id tool or the fuzzy search tool and hence execute the rest of the task.
         If there are any products in your response, you must have product ids and you have to insert the product ids (int) in an xml tag <id></id>..
+        If you fail for anyreason in your task finally let the user know the reason.
         """,
         model="gpt-4.1",
         tools=[search_by_id, fuzzy_search, add_item_to_cart, get_all_items_in_cart, remove_all_items, remove_item_from_cart],
