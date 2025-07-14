@@ -1,0 +1,68 @@
+2025-07-14 00:23:03,766 - INFO - Query on Get Agent Response
+2025-07-14 00:23:03,769 - ERROR - Error fetching agent response: 2 validation errors for User
+last_response_id
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+user_jwt
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+2025-07-14 00:24:54,454 - INFO - Query on Get Agent Response
+2025-07-14 00:24:54,459 - ERROR - Error fetching agent response: 2 validation errors for User
+last_response_id
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+user_jwt
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+2025-07-14 00:24:56,313 - INFO - Query on Get Agent Response
+2025-07-14 00:24:56,314 - ERROR - Error fetching agent response: 2 validation errors for User
+last_response_id
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+user_jwt
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+2025-07-14 00:25:51,347 - INFO - Query on Get Agent Response
+2025-07-14 00:25:51,349 - ERROR - Error fetching agent response: 2 validation errors for User
+last_response_id
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+user_jwt
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+2025-07-14 00:27:58,299 - INFO - Query on Get Agent Response
+2025-07-14 00:27:58,303 - ERROR - Error fetching agent response: 2 validation errors for User
+last_response_id
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+user_jwt
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+2025-07-14 00:29:37,531 - INFO - Query on Get Agent Response
+2025-07-14 00:29:37,533 - ERROR - Error fetching agent response: 2 validation errors for User
+last_response_id
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+user_jwt
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+2025-07-14 00:31:45,087 - INFO - Query on Get Agent Response
+2025-07-14 00:31:45,089 - ERROR - Error fetching agent response: 2 validation errors for User
+last_response_id
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+user_jwt
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+2025-07-14 00:33:23,440 - INFO - Query on Get Agent Response
+2025-07-14 00:33:23,442 - ERROR - Error fetching agent response: 2 validation errors for User
+last_response_id
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+user_jwt
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+2025-07-14 00:33:37,661 - INFO - Query on Get Agent Response
+2025-07-14 00:33:59,855 - INFO - Successfully fetched agent response
+2025-07-14 00:34:58,362 - INFO - Query on Get Agent Response
+2025-07-14 00:35:01,297 - INFO - Successfully fetched agent response
